@@ -1,34 +1,6 @@
-gitdb==4.0.11
-GitPython==3.1.4
-ipython-genutils==0.2.0
-jupyter==1.1.1
-jupyter-console==6.6.3
-jupyter-events==0.11.0
-jupyter-lsp==2.2.5
-jupyter_server==2.15.0
-jupyter_server_terminals==0.5.3
-jupyterlab==4.3.4
-jupyterlab_server==2.27.3
-matplotlib==3.9.2
-matplotlib-inline @ file:///home/conda/feedstock_root/build_artifacts/matplotlib-inline_1713250518406/work
-notebook==7.3.2
-notebook_shim==0.2.4
-numexpr @ file:///croot/numexpr_1730215937391/work
-numpy==2.0.2
-packaging @ file:///home/conda/feedstock_root/build_artifacts/packaging_1731802491770/work
+matplotlib==3.10.0
 pandas==2.2.3
 plotly==5.24.1
-
-pyspark @ file:///home/conda/feedstock_root/build_artifacts/pyspark_1729807581730/work
-python-dateutil==2.9.0.post0
-python-dotenv==1.0.1
-pyzmq==26.2.0
-scikit-learn==1.5.2
-scipy==1.14.1
 seaborn==0.13.2
-SQLAlchemy==2.0.36
-sqlparse==0.5.2
-stack-data @ file:///home/conda/feedstock_root/build_artifacts/stack_data_1669632077133/work
 statsmodels==0.14.4
 streamlit==1.41.1
-sympy==1.13.1
