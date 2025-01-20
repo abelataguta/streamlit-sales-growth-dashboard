@@ -51,7 +51,23 @@ def main():
     sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', ax=ax)
     plt.title('Correlation Matrix')
     st.pyplot(fig)
+    grouped_data = df.groupby(['period', 'product_category'])['total_sales'].sum()
 
+        # Convert the grouped data to a DataFrame with a MultiIndex
+    heatmap_data = grouped_data.unstack(fill_value=0)
+
+        # Calculate the correlation matrix
+    correlation_matrix = heatmap_data.corr()
+
+        # Plot the heatmap
+    st.write("### Correlation Heatmap:")
+    fig, ax = plt.subplots(figsize=(10, 8))
+    sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", ax=ax)
+    plt.title("Correlation between Product Categories and Order Contributions")
+
+        # Display the heatmap in Streamlit
+    st.pyplot(fig)
+   
     # Pairplot
     st.subheader("Pairplot of Sales Data")
     
@@ -60,6 +76,8 @@ def main():
     
     # Save the pairplot to a figure
     st.pyplot(pairplot_fig.fig)
+
+    
     
     # User Input for Prediction (Optional)
     st.sidebar.header("User Input for Prediction")
